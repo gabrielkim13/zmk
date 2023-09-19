@@ -273,6 +273,9 @@ config ZMK_RGB_UNDERGLOW_AUTO_OFF_USB
     bool "Turn off RGB underglow when USB is disconnected"
     depends on USB_DEVICE_STACK
 
+config ZMK_RGB_UNDERGLOW_AUTO_OFF_IDLE
+    bool "Turn off RGB underglow when keyboard goes into idle state"
+
 #ZMK_RGB_UNDERGLOW
 endif
 
@@ -339,6 +342,10 @@ endif
 config ZMK_EXT_POWER
     bool "Enable support to control external power output"
     default y
+
+config ZMK_EXT_POWER_USB_ONLY
+    bool "Turn off external power when USB is disconnected"
+    default n
 
 #Power Management
 endmenu
