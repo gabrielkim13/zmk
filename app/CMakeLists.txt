@@ -94,6 +94,7 @@ target_sources_ifdef(CONFIG_ZMK_USB app PRIVATE src/usb_hid.c)
 target_sources_ifdef(CONFIG_ZMK_RGB_UNDERGLOW app PRIVATE src/rgb_underglow.c)
 target_sources_ifdef(CONFIG_ZMK_BACKLIGHT app PRIVATE src/backlight.c)
 target_sources(app PRIVATE src/workqueue.c)
+target_sources_ifdef(CONFIG_ZMK_EXT_POWER_USB_ONLY app PRIVATE src/ext_power_usb_only.c)
 target_sources(app PRIVATE src/main.c)
 
 add_subdirectory(src/display/)
